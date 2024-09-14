@@ -1,0 +1,112 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>App de Diseño en Tiempo Real</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Ventana de los pasos -->
+    <div class="steps">
+
+      <!-- Página 1 -->
+      <div class="page" id="page1">
+        <h2>Paso 1: Escribe un título</h2>
+        <input type="text" id="titleInput" placeholder="Escribe aquí el título">
+        <h3>Color del título</h3>
+        <input type="color" id="titleColorInput" value="#000000">
+        <h3>Tamaño del título</h3>
+        <input type="range" id="titleSizeInput" min="10" max="60" value="20">
+        <!-- Selector de fuente para el título -->
+        <h3>Fuente del título</h3>
+        <select id="titleFont">
+          <option value="'Arial', sans-serif">Arial</option>
+          <option value="'Times New Roman', serif">Times New Roman</option>
+          <option value="'Courier New', monospace">Courier New</option>
+        </select>
+        <button id="next1">Siguiente</button>
+      </div>
+
+      <!-- Página 2 -->
+      <div class="page" id="page2" style="display: none;">
+        <h2>Paso 2: Escribe una descripción</h2>
+        <textarea id="descriptionInput1" placeholder="Escribe una descripción aquí"></textarea>
+        <h3>Color de la primera descripción</h3>
+        <input type="color" id="description1ColorInput" value="#000000">
+        <h3>Tamaño de la primera descripción</h3>
+        <input type="range" id="description1SizeInput" min="10" max="60" value="16">
+        <!-- Selector de fuente para la primera descripción -->
+        <h3>Fuente de la primera descripción</h3>
+        <select id="description1Font">
+          <option value="'Arial', sans-serif">Arial</option>
+          <option value="'Times New Roman', serif">Times New Roman</option>
+          <option value="'Courier New', monospace">Courier New</option>
+        </select>
+        <button id="prev2">Anterior</button>
+        <button id="next2">Siguiente</button>
+      </div>
+
+      <!-- Página 3 -->
+      <div class="page" id="page3" style="display: none;">
+        <h2>Paso 3: Escribe otra descripción</h2>
+        <textarea id="descriptionInput2" placeholder="Escribe otra descripción aquí"></textarea>
+        <h3>Color de la segunda descripción</h3>
+        <input type="color" id="description2ColorInput" value="#000000">
+        <h3>Tamaño de la segunda descripción</h3>
+        <input type="range" id="description2SizeInput" min="10" max="60" value="16">
+        <!-- Selector de fuente para la segunda descripción -->
+        <h3>Fuente de la segunda descripción</h3>
+        <select id="description2Font">
+          <option value="'Arial', sans-serif">Arial</option>
+          <option value="'Times New Roman', serif">Times New Roman</option>
+          <option value="'Courier New', monospace">Courier New</option>
+        </select>
+        <button id="prev3">Anterior</button>
+        <button id="next3">Siguiente</button>
+      </div>
+      
+<!-- Página 3 -->
+      <div class="page" id="page4" style="display: none;">
+        <h2>Paso 4: Elige un fondo</h2>
+        <label for="imagenFondo">Elige imagen de fondo:</label>
+            <input type="file" id="imagenFondo">
+        <label for="cenefa">Elige una cenefa:</label>
+            <input type="file" id="cenefa" accept="image/*">
+
+        </select>
+        <button id="prev4">Anterior</button>
+        <button id="next4">Siguiente</button>
+      </div>
+      
+      
+      <!-- Página 5 -->
+      <div class="page" id="page5" style="display: none;">
+        <h2>Paso 5: Finalizar</h2>
+        <button id="prev5">Anterior</button>
+        <button id="exportBtn">Exportar Imagen</button>
+      </div>
+
+    </div>
+
+    <!-- Ventana de vista previa -->
+    <div class="preview">
+      <div id="canvasContainer">
+        <!-- Lienzo con elementos arrastrables -->
+        <div id="canvas" style="position: relative; width: 300px; height: 450px; background-color: #f0f0f0; border: 1px solid #ddd;">
+          <div id="previewTitle" style="position: absolute; left: 0; top: 50px; cursor: move; font-size: 20px; display: inline-block;">Vista previa del título</div>
+          <div id="previewDescription1" style="position: absolute; left: 0; top: 100px; cursor: move; font-size: 16px; display: inline-block;">Vista previa de la descripción</div>
+          <div id="previewDescription2" style="position: absolute; left: 0; top: 150px; cursor: move; font-size: 16px; display: inline-block;">Vista previa de la segunda descripción</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Incluir html2canvas -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <!-- Incluir el script principal -->
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+/* styles.css */
+/* styles.css */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.steps {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+}
+
+.page {
+  display: none; /* Todas las páginas están ocultas por defecto */
+}
+
+.preview {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-left: 2px solid #ccc;
+  overflow-y: auto;
+}
+
+#canvas {
+  width: 300px;  /* Vista en pantalla */
+  height: 450px; /* Vista en pantalla */
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  position: relative;
+}
+
+
+/* Ajustamos las cajas de texto */
+#previewTitle, #previewDescription1, #previewDescription2 {
+  position: absolute;
+  padding: 5px;
+  cursor: move;
+  display: inline-block;
+  word-wrap: break-word; /* Ajusta el texto dentro de la caja si es muy largo */
+  box-sizing: border-box; /* Aseguramos que el padding no afecte el tamaño total */
+  max-width: 100%; /* Aseguramos que el texto no desborde la caja */
+}
+
+#previewTitle {
+  top: 50px;
+  font-size: 20px;
+}
+
+#previewDescription1 {
+  top: 100px;
+  font-size: 16px;
+}
+
+#previewDescription2 {
+  top: 150px;
+  font-size: 16px;
+}
